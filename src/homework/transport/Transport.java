@@ -92,9 +92,7 @@ public abstract class Transport<T extends Driver> implements Competing {
         if (s.equals("")) {
             throw new MyException("String can not be empty!");
         }
+        System.out.println("Необходимо указать тип прав! " );
         return s;
         }
-        System.out.println("Необходимо указать тип прав! " );
     }
-    return s;
-
