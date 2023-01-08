@@ -148,6 +148,14 @@ public class Bus extends Transport<CategoryD> {
     public void printInfo() {
         System.out.println("Водитель " + driver + " управляет автомобилем " + brand + " " + model + " будет участвовать в заезде!");
     }
+    public Boolean getCheckedOut() throws MyException {
+        Boolean s = driver.getDrivingLicence();
+        if (s.equals(false)) {
+            throw new MyException("String can not be empty!");
+        }
+        System.out.println("Необходимо указать тип прав! " );
+        return s;
+    }
     @Override
     public String toString() {
         return "Автобус" +

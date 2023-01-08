@@ -64,10 +64,9 @@ public class Cars extends Transport<CategoryB> {
                 ", водитель" + driver;
     }
     @Override
-    public Boolean getCheckedOut() {
+    public void getCheckedOutDiagnostic() {
         System.out.println("Необходимо пройти диагностику транспортного средства");
         System.out.println("Автомобиль прошел диагностику");
-        return null;
     }
     public void printType() {
         if (type == null ) {
@@ -87,6 +86,14 @@ public class Cars extends Transport<CategoryB> {
 
     public CategoryB getDriver() {
         return driver;
+    }
+    public Boolean getCheckedOut() throws MyException {
+        Boolean s = driver.getDrivingLicence();
+        if (s.equals(false)) {
+            throw new MyException("String can not be empty!");
+        }
+        System.out.println("Необходимо указать тип прав! " );
+        return s;
     }
 }
 

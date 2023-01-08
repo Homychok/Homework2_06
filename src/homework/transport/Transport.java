@@ -45,6 +45,7 @@ public abstract class Transport<T extends Driver> implements Competing {
             this.engineVolume = engineVolume;
 
         }
+
     }
 
 
@@ -85,11 +86,12 @@ public abstract class Transport<T extends Driver> implements Competing {
     public void printInfo() {
 }
     public abstract void printType();
+    public void getCheckedOutDiagnostic() {
+    }
 
     public Boolean getCheckedOut() throws MyException {
-        Boolean s = null;
-        s = driver.getDrivingLicence();
-        if (s.equals("")) {
+        Boolean s = driver.getDrivingLicence();
+        if (s.equals(false)) {
             throw new MyException("String can not be empty!");
         }
         System.out.println("Необходимо указать тип прав! " );

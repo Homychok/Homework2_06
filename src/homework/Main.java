@@ -31,18 +31,18 @@ public class Main {
 //        }
 
     public static void main(String[] args) {
-        Bus bus1 = new Bus("Reno", "A5", 2.1, 1,"busType");
-        Bus bus2 = new Bus("Reno", "Logan", 3.7, 49,"busType");
-        Bus bus3 = new Bus("Reno", "F4", 4.5, 35,"");
-        Bus bus4 = new Bus("Reno", "A6", 7.2, 150,"busType");
-        Cars car1 = new Cars("Lada", "Granta", 3.4, Cars.BodyType.SUV,"carType");
+        Bus bus1 = new Bus("Reno", "A5", 2.1, 1, "busType");
+        Bus bus2 = new Bus("Reno", "Logan", 3.7, 49, "busType");
+        Bus bus3 = new Bus("Reno", "F4", 4.5, 35, "");
+        Bus bus4 = new Bus("Reno", "A6", 7.2, 150, "busType");
+        Cars car1 = new Cars("Lada", "Granta", 3.4, Cars.BodyType.SUV, "carType");
         Cars car2 = new Cars("Lada", "Vesta1", 4.4, Cars.BodyType.VAN, "carType");
-        Cars car3 = new Cars("Lada", "X-Ray", 5.4, Cars.BodyType.MINIVAN,"carType");
-        Cars car4 = new Cars("Lada", "Vesta2", 6.4, Cars.BodyType.HATCHBACK,"carType");
-        Tracks track1 = new Tracks("Kia", "A1", 10.1, N1,"trackType");
-        Tracks track2 = new Tracks("Kia", "A1", 11.1, N2,"trackType");
-        Tracks track3 = new Tracks("Kia", "A1", 12.1, N2,"trackType");
-        Tracks track4 = new Tracks("Kia", "A1", 13.1, N3,"trackType");
+        Cars car3 = new Cars("Lada", "X-Ray", 5.4, Cars.BodyType.MINIVAN, "carType");
+        Cars car4 = new Cars("Lada", "Vesta2", 6.4, Cars.BodyType.HATCHBACK, "carType");
+        Tracks track1 = new Tracks("Kia", "A1", 10.1, N1, "trackType");
+        Tracks track2 = new Tracks("Kia", "A1", 11.1, N2, "trackType");
+        Tracks track3 = new Tracks("Kia", "A1", 12.1, N2, "trackType");
+        Tracks track4 = new Tracks("Kia", "A1", 13.1, N3, "trackType");
         CategoryB carDriver1 = new CategoryB(1, "Ivan Ivanovich", true);
         CategoryB carDriver2 = new CategoryB(2, "Ivan Petrovich", true);
         CategoryB carDriver3 = new CategoryB(3, "Ivan Kuzmichov", true);
@@ -95,7 +95,11 @@ public class Main {
         bus3.printType();
         car1.printType();
         track1.printType();
-car1.getCheckedOut();    }
+        car1.getCheckedOutDiagnostic();
+        track1.getCheckedOutDiagnostic();
+        carDriver2.getDrivingLicence();
+
+    }
 }
 
 
